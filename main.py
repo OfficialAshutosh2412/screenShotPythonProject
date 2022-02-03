@@ -5,7 +5,7 @@ import pyautogui
 
 # import tkinter as tk
 from tkinter.filedialog import *
-
+from tkinter import *
 # function for taking screenshot
 
 
@@ -15,9 +15,8 @@ def screenshot():
     snaptaker.save(save_path+'screenshot.png')
 
 
-root = tk.Tk()
-screen = tk.Canvas(root, width = 300, height = 300)
-screen.pack()
-btn = tk.Button(root, text='take snapshot', command = screenshot, font = 10)
+root = Tk()
+root.geometry("300x300+350+40")
+btn = Button(root, text='take snapshot', command = screenshot, font = 10)
 btn.pack()
 root.mainloop()
